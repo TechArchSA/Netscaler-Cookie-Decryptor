@@ -64,7 +64,10 @@ def decrypt_cookie(cookie)
   [realname, realip, realport]
 end
 
-puts "USAGE: ruby #{__FILE__} <NetScalerCookie>" ; exit! if ARGV[0].nil?
+if ARGV.empty?
+  puts "USAGE: ruby #{__FILE__} <NetScalerCookie>" ; exit! 
+end
+
 cookie = ARGV[0]
 realname, realip, realport = decrypt_cookie(cookie)
 puts "[+] vServer Name: #{realname}"
