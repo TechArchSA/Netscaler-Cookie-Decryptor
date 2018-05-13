@@ -3,7 +3,7 @@
 # Ruby script to decrypt Citrix Netscaler Load Balancer Persistence Cookies
 # 
 # @Author: Sabri Saleh | @KINGSABRI
-# Translated from: https://github.com/catalyst256/Netscaler-Cookie-Decryptor/
+# Ported from: https://github.com/catalyst256/Netscaler-Cookie-Decryptor/
 # 
 # Usage: 
 # ruby nsccookiedecrypt.rb <NetScalerCookie>
