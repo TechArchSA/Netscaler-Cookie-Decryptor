@@ -39,7 +39,7 @@ end
 # @return [String] the decoded IP address
 def decrypt_server_ip(serverip)
   ipkey = 0x03081e11
-  decodedip = (serverip ^ ipkey).to_s(16).ljust(8)
+  decodedip = (serverip ^ ipkey).to_s(16).rjust(8, '0')
   IPAddr.new(decodedip.hex, Socket::AF_INET).to_s
 end
 
