@@ -21,6 +21,7 @@ def parse_cookie(cookie)
   [servicename, serverip.hex, serverport.hex]
 rescue 
   puts "[!] Couldn't parse cookie: #{cookie}"
+  exit!
 end
 
 # Decrypts the Caesar Subsitution Cipher Encryption used on the Netscaler Cookie Name
