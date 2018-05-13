@@ -15,7 +15,7 @@ require 'ipaddr'
 # @return [Array <String, Integer, Integer>]
 #   array of servicename, serverip.hex, serverport.hex
 def parse_cookie(cookie)
-  pattern = /NSC_([a-zA-Z0-9\-\_\.]*)=[0-9a-f]{8}([0-9a-f]{8}).*([0-9a-f]{4})$/
+  pattern = /NSC_([[:print:]\-\_\.]*)=[0-9a-f]{8}([0-9a-f]{8}).*([0-9a-f]{4})$/
   parsed  = cookie.scan(pattern)    
   servicename, serverip, serverport = parsed.flatten unless parsed.nil?
   [servicename, serverip.hex, serverport.hex]
